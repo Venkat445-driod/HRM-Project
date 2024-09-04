@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Candidate</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .form-container {
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="file"] {
+            padding: 5px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .file-input {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .file-input input[type="file"] {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Add Candidate</h2>
+        <form>
+            <div class="form-group">
+                <label for="first-name">Full Name*</label>
+                <div style="display: flex; gap: 10px;">
+                    <input type="text" id="first-name" placeholder="First Name">
+                    <input type="text" id="middle-name" placeholder="Middle Name">
+                    <input type="text" id="last-name" placeholder="Last Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="vacancy">Vacancy</label>
+                <select id="vacancy">
+                    <option value="">-- Select --</option>
+                    <option value="position1">Position 1</option>
+                    <option value="position2">Position 2</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="email">Email*</label>
+                <input type="email" id="email" placeholder="Type here">
+            </div>
+            <div class="form-group">
+                <label for="contact-number">Contact Number</label>
+                <input type="text" id="contact-number" placeholder="Type here">
+            </div>
+            <div class="form-group file-input">
+                <label for="resume">Resume</label>
+                <input type="file" id="resume">
+            </div>
+            <div>
+                <small>Accepts .docx, .doc, .odt, .pdf, .rtf, .txt up to 1MB</small>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

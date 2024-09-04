@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Vacancy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .form-container {
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group-inline {
+            display: flex;
+            gap: 10px;
+        }
+
+        .form-group-inline .form-group {
+            flex: 1;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .toggle-switch {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .toggle-switch input {
+            display: none;
+        }
+
+        .toggle-switch span {
+            width: 40px;
+            height: 20px;
+            background-color: #ccc;
+            border-radius: 10px;
+            position: relative;
+            transition: background-color 0.3s;
+        }
+
+        .toggle-switch span::before {
+            content: '';
+            width: 18px;
+            height: 18px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            transition: transform 0.3s;
+        }
+
+        .toggle-switch input:checked + span {
+            background-color: #ff9800;
+        }
+
+        .toggle-switch input:checked + span::before {
+            transform: translateX(20px);
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Add Vacancy</h2>
+        <form>
+            <div class="form-group-inline">
+                <div class="form-group">
+                    <label for="vacancy-name">Vacancy Name*</label>
+                    <input type="text" id="vacancy-name" placeholder="Enter vacancy name">
+                </div>
+                <div class="form-group">
+                    <label for="job-title">Job Title*</label>
+                    <select id="job-title">
+                        <option value="">-- Select --</option>
+                        <option value="job1">Job Title 1</option>
+                        <option value="job2">Job Title 2</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" rows="4" placeholder="Type description here"></textarea>
+            </div>
+            <div class="form-group-inline">
+                <div class="form-group">
+                    <label for="hiring-manager">Hiring Manager*</label>
+                    <input type="text" id="hiring-manager" placeholder="Type for hints...">
+                </div>
+                <div class="form-group">
+                    <label for="number-of-positions">Number of Positions</label>
+                    <input type="text" id="number-of-positions" placeholder="Enter number of positions">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="toggle-switch">
+                    <input type="checkbox" id="active">
+                    <span></span>
+                    <label for="active">Active</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="toggle-switch">
+                    <input type="checkbox" id="publish">
+                    <span></span>
+                    <label for="publish">Publish in RSS Feed and Web Page</label>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

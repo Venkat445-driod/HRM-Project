@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Search Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab-button active">Candidates</button>
+            <button class="tab-button">Vacancies</button>
+        </div>
+        <div class="tab-content" id="candidates">
+            <h2>Candidates</h2>
+            <form>
+                <div class="form-group">
+                    <label for="job-title">Job Title</label>
+                    <select id="job-title" name="job-title">
+                        <option>-- Select --</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="vacancy">Vacancy</label>
+                    <select id="vacancy" name="vacancy">
+                        <option>-- Select --</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="hiring-manager">Hiring Manager</label>
+                    <select id="hiring-manager" name="hiring-manager">
+                        <option>-- Select --</option>
+                        <!-- Options here -->
+                </div>
+                <div class="form-group">
+                    <label for="status">Status</label>
+                    <select id="status" name="status">
+                        <option>-- Select --</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="candidate-name">Candidate Name</label>
+                    <input type="text" id="candidate-name" name="candidate-name" placeholder="Type for hints...">
+                </div>
+                <div class="form-group">
+                    <label for="keywords">Keywords</label>
+                    <input type="text" id="keywords" name="keywords" placeholder="Enter comma separated words...">
+                </div>
+                <div class="form-group">
+                    <label for="date-from">Date of Application</label>
+                    <input type="date" id="date-from" name="date-from">
+                    <input type="date" id="date-to" name="date-to">
+                </div>
+                <div class="form-group">
+                    <label for="method-of-application">Method of Application</label>
+                    <select id="method-of-application" name="method-of-application">
+                        <option>-- Select --</option>
+                    </select>
+                </div>
+                <div class="form-buttons">
+                    <button type="reset">Reset</button>
+                    <button type="submit">Search</button>
+                </div>
+            </form>
+        </div>
+        <div class="tab-content" id="vacancies" style="display:none;">
+            <h2>Vacancies</h2>
+        </div>
+    </div>
+</body>
+</html>
